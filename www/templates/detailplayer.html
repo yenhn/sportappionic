@@ -1,0 +1,36 @@
+<ion-view view-title="Detail Player" class="view__detail__player">
+  <ion-content class="content__detailplayer">
+    <div class="col col-center content__headdetail">
+      <div><img src="img/team/5.jpg" class="img__detailplayer"></div>      
+      <div class="col col-center detail__smallimage">
+        <img src="img/team/5.jpg" class="img__smallplayer"> 
+      </div>
+      <div class="col col-center detail__player">
+        <label class="player__name">DIEP NGOC SANG</label>
+      </div>
+      <div class="row col col-center detail__player">
+        <button class="button__follow">
+          <span><i class="icon ion-android-wifi button__follow--icon"></i></span>
+          <span class="button__follow--label">Follow</span>
+        </button>
+        <span><i class="fa fa fa-facebook font_facebook" aria-hidden="true"></i></span>
+        <span><i class="fa fa-twitter font_twitter" aria-hidden="true"></i></span>
+        <span><i class="fa fa-pinterest-p font_pinterest" aria-hidden="true"></i></span>
+      </div>    
+    </div>
+    <div class="content__contentdetail">
+      <ion-tabs class="tabs-icon-left">
+        <ion-tab title="Info" icon-on="ion-information-circled" icon-off="ion-ios-information-outline">
+          <ion-nav-view name="info-tab"><div class="sub_tabcontent" ng-include="'templates/tabtemplate/info.html'"></div></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Album" icon-on="ion-ios-camera" icon-off="ion-ios-camera-outline">
+          <ion-nav-view name="info-tab"><div class="sub_tabcontent" ng-include="'templates/tabtemplate/album.html'"></div></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Team" icon="ion-ios-people" icon-off="ion-ios-people-outline">
+          <ion-nav-view name="info-tab"><div class="sub_tabcontent" ng-include="'templates/tabtemplate/team.html'"></div></ion-nav-view>
+        </ion-tab>
+      </ion-tabs>
+    </div>
+  </ion-content>
+
+</ion-view>

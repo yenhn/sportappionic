@@ -1,0 +1,792 @@
+/*********************************** GENERAL STYLES ************************************/
+
+@font-face {
+    font-family: CaviarDreams;
+    src: url(../lib/fonts/CaviarDreams.ttf);
+}
+
+body {
+    font-family: CaviarDreams;
+}
+
+
+/****** MENU ******/
+
+.tab-item {
+    opacity: 1;
+    font-family: CaviarDreams;
+    font-weight: bold;
+    color: #323A45;
+}
+
+.tab-item i {
+    color: #323A45;
+}
+
+.bar-stable .button.button-clear {
+    color: #43bf87;
+}
+
+
+/****** HEADER ******/
+
+.bar.bar-stable {
+    background: #323A45;
+}
+
+.bar.bar-stable .title {
+    color: #43bf87;
+    font-weight: bold;
+}
+
+.detail-content-team {
+    align-items: center;
+}
+
+
+/*.has-header{
+top: 44px!important;
+}*/
+
+
+/****** CONTENT HOME******/
+
+.news {
+    background: #eee;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+.news i {
+    color: #43bf87;
+    font-size: 3vw;
+    font-style: italic;
+}
+
+.item {
+    padding: 0;
+}
+
+.item h2 {
+    color: #43bf87;
+    padding: 7px 0;
+    font-size: 1.5em;
+    font-weight: normal;
+    font-family: CaviarDreams;
+}
+
+.date {
+    position: relative;
+    background: #43bf87;
+    padding: 5px;
+    font-weight: bolder;
+    color: #323A45;
+    top: 50px;
+    width: 20%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3vw;
+    font-family: CaviarDreams;
+    z-index: 1;
+}
+
+
+/****** CONTENT LADDER ******/
+
+.caption {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0;
+    font-size: 3vw;
+}
+
+.title-ladder {
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    color: #43bf87;
+}
+
+.ladder-content {
+    margin-top: 5px !important;
+}
+
+.logo-ladder-team {
+    /* background-image:url('../img/ladder/1.jpg'); */
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+    font-weight: bolder;
+    font-size: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.logo {
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    filter: brightness(70%);
+    /* Current draft standard */
+    -webkit-filter: brightness(70%);
+    /* New WebKit */
+    -moz-filter: brightness(70%);
+    -ms-filter: brightness(70%);
+    -o-filter: brightness(70%);
+    /* Not yet supported in Gecko, Opera or IE */
+    filter: url(resources.svg#desaturate);
+    /* Gecko */
+    filter: white;
+    /* IE */
+    -webkit-filter: brightness(0.7);
+    /* Old WebKit */
+}
+
+.logo span {
+    text-align: center;
+    display: block;
+    color: #fff;
+    font-weight: bolder;
+    text-shadow: 1px 0px #cecece;
+}
+
+.team-name {
+    padding-left: 5px;
+}
+
+.short-name {
+    background: blue;
+    color: #fff;
+    padding: 5px 10px;
+    text-align: center;
+    display: inline;
+}
+
+.lineheight {}
+
+.ind,
+.brz,
+.nyk,
+.phi,
+.bru,
+.blu,
+.ali {
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bolder;
+    font-size: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline;
+}
+
+.ind {
+    background-color: #903823;
+}
+
+.brz {
+    background-color: #0084c4;
+}
+
+.nyk {
+    background-color: #1a1b36;
+}
+
+.phi {
+    background-color: #fad157;
+}
+
+.bru {
+    background-color: #43bf87;
+}
+
+.blu {
+    background-color: #14b9d6;
+}
+
+.ali {
+    background-color: #F27935;
+}
+
+
+/****** FOOTER ******/
+
+.footer-bottom {
+    bottom: 88px;
+    top: 0px !important;
+}
+
+
+/****** CUSTOMER CSS ******/
+
+.ionic_datepicker_modal .header,
+.ionic_datepicker_modal .footer,
+.ionic_datepicker_modal .selected_date {
+    background-color: #43BF87!important;
+}
+
+.ionic_datepicker_modal .selected_date {
+    border-radius: 50% !important;
+    -webkit-border-radius: 50% !important;
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 50% !important;
+}
+
+.ionic_datepicker_modal .button-clear i {
+    color: #43BF87!important;
+}
+
+.ionic_datepicker_modal .button-clear,
+.ionic_datepicker_modal .header .title,
+.ionic_datepicker_modal .header .button,
+.ionic_datepicker_modal .footer .title,
+.ionic_datepicker_modal .footer .button {
+    color: #323A45!important;
+    font-weight: bold!important;
+}
+
+
+/*******TEAM PAGE**********/
+
+.image__background {
+    width: 100%;
+    height: 100%;
+}
+
+.background-team {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 90px !important;
+    position: relative;
+}
+
+.image__gk {
+    text-align: center;
+    margin-top: 32px;
+    position: absolute;
+    top: 0px;
+}
+
+.image__player--gk {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 50%;
+}
+
+.image__team4 {
+    text-align: center;
+    position: absolute;
+    top: 21%;
+}
+
+.image__player--team4 {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 50%;
+}
+
+.image__player--team3 {
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 50%;
+}
+
+.image__team3--row1 {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+}
+
+.image__team3--row2 {
+    text-align: center;
+    position: absolute;
+    top: 60%;
+}
+
+
+/*********DETAIL PLAYER**********/
+
+.view__detail__player {
+    bottom: 44px !important;
+}
+
+.content__detailplayer {
+    top: 0px !important;
+    bottom: 16% !important;
+}
+
+.img__detailplayer {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*-webkit-filter: blur(10px);*/
+    opacity: 0.8;
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+}
+
+.img__smallplayer {
+    width: 30%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+.detail__smallimage {
+    position: relative;
+    text-align: center;
+    top: 0px;
+    padding-top: 25px;
+}
+
+.detail__player {
+    position: relative;
+    text-align: center;
+}
+
+.player__name {
+    font-weight: bold;
+    font-size: 3vw;
+    color: white;
+}
+
+.font_facebook {
+    font-size: 19px !important;
+    color: white;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 7px;
+    /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+    background: #3b589e;
+    padding: 5px 10px 5px 10px;
+}
+
+.font_twitter {
+    font-size: 19px !important;
+    color: white;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 7px;
+    background: #15b9ee;
+    padding: 5px 5px 5px 7px;
+    margin-left: 1px;
+}
+
+.font_pinterest {
+    font-size: 19px !important;
+    color: white;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 7px;
+    background: #ee2c34;
+    padding: 5px 7px 5px 7px;
+    margin-left: 1.5px;
+}
+
+.button__follow {
+    background-color: skyblue;
+    border: 0px;
+    color: white;
+    margin-right: 25px;
+    padding: 5px 15px 5px 15px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 20px;
+}
+
+.button__follow--label {
+    border-left: 1px solid;
+    padding-left: 10px;
+    font-family: CaviarDreams;
+}
+
+.button__follow--icon {
+    padding-right: 5px;
+}
+
+.content__contentdetail {
+    width: 100%;
+    position: relative;
+    margin-top: 45px;
+    border-bottom: 1px solid darkgray;
+}
+
+.content__headdetail {
+    position: relative;
+    padding-bottom: 25px;
+}
+
+.icon__tab {
+    font-size: 25px !important;
+    height: 28px !important;
+    margin-top: 2px !important;
+}
+
+.tabitem__border {
+    border-right: 1px solid lightgray;
+}
+
+.viewSample {
+    background-color: green;
+    height: 100px;
+}
+
+.sub_tabcontent {
+    position: absolute;
+    width: 100%;
+    padding-bottom: 10px;
+    z-index: 4;
+}
+
+
+/*******Info player**********/
+
+.list__infoplayer {
+    width: 100%;
+    margin-top: 5px;
+    border: solid 1px lightgray;
+    align-items: center;
+    /*background-color: lightgray;*/
+}
+
+.list__infoplayer--under {
+    width: 100%;
+    margin-top: 0 !important;
+    border: solid 1px lightgray;
+    align-items: center;
+}
+
+.clubtab__image {
+    text-align: center;
+}
+
+.clubtab__image--label {
+    font-weight: bold;
+    font-size: 7vw;
+}
+
+.clubtab__image--img {
+    margin-top: 15px;
+    width: 80%;
+}
+
+.label__detail--left {
+    font-weight: bold;
+}
+
+.detailcontent__right {
+    margin-top: 5px;
+    padding: 0px !important;
+}
+
+.flag-international {
+    width: 100%;
+}
+
+.flag-img {
+    width: 6vw;
+    margin-left: 7px;
+}
+
+
+/*********album*******/
+
+.img-slidebox {
+    width: 100%;
+}
+
+.list__slide {
+    margin-top: 5px !important;
+}
+
+.possition__content {
+    /*background-color: lightgray;*/
+}
+
+.icon__pos--red {
+    color: red;
+    font-size: 4vw !important;
+}
+
+.icon__pos--blue {
+    color: blue;
+    font-size: 4vw;
+}
+
+.icon__pos--yellow {
+    color: #FFCC00;
+    font-size: 4vw !important;
+}
+
+.icon__pos--green {
+    color: green;
+    font-size: 4vw !important;
+}
+
+.icon__pos--gray {
+    color: gray;
+    font-size: 4vw !important;
+}
+
+.icon__pos {
+    font-size: 4vw;
+}
+
+.number__shirt {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    margin-top: 3%;
+}
+
+.number__shirt--number {
+    position: absolute;
+    top: 33%;
+    left: 0;
+    width: 100%;
+}
+
+.clubtab__image--numbershirt {
+    width: 60%;
+}
+
+.clubtab__image--imgshirt {
+    width: 100%;
+    margin-left: 4%;
+}
+
+.number__shirt--span {
+    font-size: 10vw;
+    font-weight: bold;
+    color: wheat;
+    width: 100%;
+}
+
+.label__detail {
+    font-size: 4vw;
+}
+
+.content__pos {
+    margin-top: 0 !important;
+}
+
+.content__pos--left {
+    padding-bottom: 10px;
+}
+
+.detailcontent {
+    padding-left: 10%;
+}
+
+.position__background {
+    padding: 0 5px 0 5px;
+}
+
+
+/*********album tab********/
+
+#tabs {
+    overflow: auto;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#tabs li {
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+#tabs a {
+    box-shadow: -4px 0 0 rgba(0, 0, 0, .2);
+    background: #ad1c1c;
+    background: linear-gradient(225deg, transparent 53px, #ccc 10px);
+    /*text-shadow: 0 1px 0 rgba(0,0,0,.5);*/
+    color: black;
+    float: left;
+    /*font: bold 12px/35px 'Lucida sans', Arial, Helvetica;*/
+    font: bold 13px/35px 'Lucida sans', Arial, Helvetica;
+    /*font-family: CaviarDreams;*/
+    /*height: 35px;*/
+    padding: 0 100px 0 15px;
+    text-decoration: none;
+}
+
+.album__player {
+    /*border: solid 1px lightgray;*/
+    width: 100%;
+}
+
+.album__player--image {
+    width: 30%;
+    /*border-right: solid 2px gray; */
+}
+
+.image__album {
+    height: 95px;
+    width: 100%;
+    padding: 0;
+}
+
+
+/***************TEAM**************/
+
+.title__team {
+    width: 100%;
+    background: #34495e;
+    /*border: solid 1px lightgray;*/
+    align-items: center;
+    height: 50vw;
+}
+
+.title__team__header--year {
+    text-align: center;
+}
+
+.title__team__header--label {
+    font-weight: bold;
+    color: white;
+}
+
+.title__team__content {
+    width: 100%;
+    border: 1px solid gray;
+    border-top: 0;
+    height: 60vw;
+    background: url()
+    /*opacity: 0.6;*/
+}
+
+.title__team__header {
+    width: 100%;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+.slide__team {
+    position: absolute;
+    width: calc(100% - 10px);
+    top: 3%;
+}
+
+.team__template {
+    position: relative;
+}
+
+.slide__team__header {
+    text-align: center;
+}
+
+.slide__team__content {
+    text-align: center;
+    padding: 0 !important;
+    align-items: center;
+}
+
+.slide__team__header--year {
+    color: wheat;
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+.slide__team__content--img {
+    width: 30%;
+}
+
+.slide__team__header--nameclub {
+    text-align: center;
+}
+
+.slide__team__header--nameclub .slide__team__header--year {
+    color: wheat;
+    font-size: 5vw;
+}
+
+.slide__team__content--detail__image {
+    width: 100%;
+    padding: 30%;
+    padding-top: 20%;
+    margin-left: 15%;
+    ;
+}
+
+.slide__team__content--detail {
+    width: 100%;
+}
+
+.slide__team__content__detail {
+    text-align: center;
+    padding: 0 !important;
+    align-items: center;
+    margin-top: 10vw;
+}
+
+.detail-content-team__img {
+    width: 30%;
+}
+
+.detail__total__play {
+    height: 30vw;
+    margin-right: 15%;
+}
+
+hr {
+    margin-right: 17%;
+    width: 80%;
+    margin-top: 0;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.detail-content-img {
+    text-align: right;
+    padding-right: 2%;
+}
+
+.column-right {
+    padding-right: 10%;
+}
+
+.detail-icon-content {
+    font-size: 6vw !important;
+    color: gray;
+}
+
+.detail-text-content {
+    font-size: 5vw !important;
+    color: black;
+}
