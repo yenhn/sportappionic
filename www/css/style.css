@@ -231,7 +231,7 @@ top: 44px!important;
 .ionic_datepicker_modal .header,
 .ionic_datepicker_modal .footer,
 .ionic_datepicker_modal .selected_date {
-    background-color: #43BF87!important;
+    background-color: #323A45!important;
 }
 
 .ionic_datepicker_modal .selected_date {
@@ -250,10 +250,14 @@ top: 44px!important;
 .ionic_datepicker_modal .header .button,
 .ionic_datepicker_modal .footer .title,
 .ionic_datepicker_modal .footer .button {
-    color: #323A45!important;
+    color: #43BF87!important;
     font-weight: bold!important;
 }
 
+.ionic_datepicker_modal .today{
+    border: 0!important;
+    color: #43BF87!important;
+}
 
 /*******TEAM PAGE**********/
 
@@ -342,12 +346,12 @@ top: 44px!important;
     width: 100%;
     height: 100%;
     /*-webkit-filter: blur(10px);*/
-    opacity: 0.8;
-    -webkit-filter: blur(10px);
-    -moz-filter: blur(10px);
-    -o-filter: blur(10px);
-    -ms-filter: blur(10px);
-    filter: blur(10px);
+    /* opacity: 0.8; */
+    -webkit-filter: blur(8px);
+    -moz-filter: blur(8px);
+    -o-filter: blur(8px);
+    -ms-filter: blur(8px);
+    filter: blur(8px);
 }
 
 .img__smallplayer {
@@ -407,7 +411,7 @@ top: 44px!important;
     /* Firefox 1-3.6 */
     -moz-border-radius: 7px;
     background: #ee2c34;
-    padding: 5px 7px 5px 7px;
+    padding: 5px 9px;
     margin-left: 1.5px;
 }
 
@@ -437,7 +441,7 @@ top: 44px!important;
     width: 100%;
     position: relative;
     margin-top: 45px;
-    border-bottom: 1px solid darkgray;
+    /* border-bottom: 1px solid darkgray; */
 }
 
 .content__headdetail {
@@ -450,7 +454,15 @@ top: 44px!important;
     height: 28px !important;
     margin-top: 2px !important;
 }
-
+.tabs-icon-left.tabs .tab-item, .tabs-icon-left > .tabs .tab-item, .tabs-icon-right.tabs .tab-item, .tabs-icon-right > .tabs .tab-item{
+    font-size: 15px!important;
+}
+.tabs-icon-left > .tabs .tab-item .icon, .tabs-icon-left.tabs .tab-item .icon{
+    padding: 0 15px!important;
+}
+span.tab-title.ng-binding{
+    padding-top: 2px!important;
+}
 .tabitem__border {
     border-right: 1px solid lightgray;
 }
@@ -600,9 +612,11 @@ top: 44px!important;
 }
 
 .content__pos--left {
-    padding-bottom: 10px;
+    padding: 15px 10px;
 }
-
+.content__pos--left label{
+    padding-right:2px;
+}
 .detailcontent {
     padding-left: 10%;
 }
