@@ -62,7 +62,7 @@ angular.module('sportApp.controllers', [])
             },
             disabledDates: [
                 new Date(1437719836326),
-                new Date(2016, 1, 25),
+                new Date(2016, 4, 25),
                 new Date(2015, 7, 10),
                 new Date('Wednesday, August 12, 2015'),
                 new Date("08-14-2015"),
@@ -74,11 +74,12 @@ angular.module('sportApp.controllers', [])
             inputDate: new Date(),
             mondayFirst: true,
             showTodayButton: false,
-            closeOnSelect: true,
+            closeOnSelect: false,
             templateType: 'modal'
         };
         $scope.openDatePickerTwo = function(val) {
             ionicDatePicker.openDatePicker(ipObj1);
+            $(".pointer_events_none").append("<div class='test'>test</div>")
         }
     });
     // .controller('DetailTeamPlayer', function($scope, $stateParams) {

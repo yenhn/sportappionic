@@ -58,7 +58,7 @@ angular.module('sportApp', ['ionic','ionic-datepicker', 'sportApp.controllers', 
     inputDate: new Date(),      //Optional
     mondayFirst: true,          //Optional
     disableWeekdays: [0],       //Optional
-    closeOnSelect: true,       //Optional
+    closeOnSelect: false,       //Optional
     templateType: 'modal'       //Optional
     // ionicDatePickerProvider.configDatePicker(datePickerObj);
     }

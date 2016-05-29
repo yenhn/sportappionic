@@ -1,24 +1,20 @@
-<ion-view view-title="Team">
+<ion-view view-title="Team" ng-controller="TeamController">
   <div class="background-team">    
       <img src="img/stadium2.jpg" class="image__background">
-      <div class="col col-center image__gk">
-        <img src="img/team/1.jpg" class="image__player--gk" ui-sref="app.detailplayer">
+
+      <div class="col col-center image__gk" >
+        <img src="img/team/{{item.ImagePlayer}}" class="image__player--gk" ui-sref="app.detailplayer" ng-repeat="item in GK"> 
       </div>
+
       <div class="col col-center image__team4">
-        <img src="img/team/1.jpg" class="image__player--team4">
-        <img src="img/team/1.jpg" class="image__player--team4">
-        <img src="img/team/1.jpg" class="image__player--team4">
-        <img src="img/team/1.jpg" class="image__player--team4">
+        <img src="img/team/{{item2.ImagePlayer}}" class="image__player--team4" ng-repeat="item2 in DEF">
       </div>
       <div class="col col-center image__team3--row1">
-        <img src="img/team/1.jpg" class="image__player--team3">
-        <img src="img/team/1.jpg" class="image__player--team3">
-        <img src="img/team/1.jpg" class="image__player--team3">
+        <img src="img/team/{{item3.ImagePlayer}}" class="image__player--team3" ng-repeat="item3 in MD">
+        
       </div>
       <div class="col col-center image__team3--row2">
-        <img src="img/team/1.jpg" class="image__player--team3">
-        <img src="img/team/1.jpg" class="image__player--team3">
-        <img src="img/team/1.jpg" class="image__player--team3">
+        <img src="img/team/{{item4.ImagePlayer}}" class="image__player--team3" ng-repeat="item4 in FW">
       </div> 
   </div>
 </ion-view>
