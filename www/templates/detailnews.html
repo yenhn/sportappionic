@@ -1,11 +1,11 @@
-<ion-view view-title="Detail News">
+<ion-view view-title="Detail News" ng-controller="NewsDetailController">
   <ion-content class="footer-bottom">
     <div class="list">
 	    <a class="item" href="#">
-	      	<div class="date">02 oct</div>
+	      	<div class="date" ng-bind="Post_Date"></div>
 	      	<img src="img/1.jpg" width="100%" href="#">
 	      	<div class="news">
-	      		<h2>Pretty Hate Machine</h2>
+	      		<h2 ng-bind="Title"></h2>
 		      	<p>Nine Inch Nails Nine Inch Nails Nine Inch Nails Nine Inch Nails Nine Inch Nails Nine Inch Nails Nine Inch Nails Nine Inch Nails Nine Inch Nails Nine Inch Nails Nine Inch Nails Nine Inch Nails Nine Inch Nails Nine Inch Nails Nine Inch Nails Nine Inch Nails Nine Inch Nails Nine Inch Nails Nine Inch Nails Nine Inch Nails </p>
 		      	<i class="icon ion-eye" href="#"> View More</i>
 	      	</div>

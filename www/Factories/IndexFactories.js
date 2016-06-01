@@ -4,13 +4,13 @@
 			return $firebaseArray(new Firebase(url));
 		}
 
-		function GetDetailNews(id){
-			return "ID :" + id
+		function GetDetailNews(url, id){
+			return new Firebase(url + id);
 		}
 
 		return {
 			getAllNews: GetAllNews,
-			age : GetDetailNews
+			getDetail : GetDetailNews
 		}
 	})
 }(angular.module('sportApp')));
