@@ -1,31 +1,7 @@
 (function(app){
-	app.controller("NewsController", function($scope, $timeout, $ionicLoading, News){
+	app.controller("NewsController", function($scope, $timeout, $ionicLoading, sportFactory){
 
 		// Setup the loader
-		
-
-		
-			
-			var newsObject = News.getAllNews("https://sportappionic.firebaseio.com/news");
-			newsObject.$loaded().then(function(){
-				$ionicLoading.hide();
-					var NewsItems = [];
-					angular.forEach(newsObject, function(rsp){					
-						NewsItems.push({
-							Id: rsp.$id,
-							Title: rsp.title,
-							Content: rsp.content,
-							Post_Date: rsp.post_date,
-							ImageUrl: rsp.image
-						})
-											
-					})
-								
-					$scope.Items = NewsItems;
-				})
-	})
-
-	app.controller("NewsDetailController", function($scope, $ionicLoading, $stateParams, News){
 		$ionicLoading.show({
 			content: 'Loading',
 			animation: 'fade-in',
@@ -33,7 +9,40 @@
 			maxWidth: 200,
 			showDelay: 0
 		});
-		var artical = News.getDetail("https://sportappionic.firebaseio.com/news/", $stateParams.id);
+
+	
+		
+		var articles = sportFactory.GetAll("https://sportappionic.firebaseio.com/news");
+
+		articles.$loaded().then(function(){
+			$ionicLoading.hide();
+			post_item = [];
+			angular.forEach(articles, function(rsp){
+				post_item.push({
+					Id: rsp.$id,
+					Title: rsp.title,
+					Content: rsp.content,
+					Post_Date: rsp.post_date,
+					ImageUrl: rsp.image
+				})				
+			})	
+
+			$scope.Items = post_item;
+	
+		})
+
+		
+	})
+
+	app.controller("NewsDetailController", function($scope, $ionicLoading, $stateParams, sportFactory){
+		$ionicLoading.show({
+			content: 'Loading',
+			animation: 'fade-in',
+			showBackdrop: true,
+			maxWidth: 200,
+			showDelay: 0
+		});
+		var artical = sportFactory.getDetail("https://sportappionic.firebaseio.com/news/", $stateParams.id);
 
 		artical.on("value", function(snapshot, prevChildKey){
 			$ionicLoading.hide();

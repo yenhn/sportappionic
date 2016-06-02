@@ -1,6 +1,6 @@
 (function(app){
-	app.factory("News", function($firebaseArray){
-		function GetAllNews(url){
+	app.factory("sportFactory", function($firebaseArray){
+		function GetAllRecord(url){
 			return $firebaseArray(new Firebase(url));
 		}
 
@@ -9,7 +9,7 @@
 		}
 
 		return {
-			getAllNews: GetAllNews,
+			GetAll: GetAllRecord,
 			getDetail : GetDetailNews
 		}
 	})

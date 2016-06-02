@@ -1,4 +1,4 @@
-<ion-view view-title="Ladder">
+<ion-view view-title="Ladder" ng-controller="LadderController">
   <ion-content>
     <h1 class="caption">OVERALL</h1>
     <div class="row title-ladder">
@@ -10,17 +10,17 @@
 	  <div class="col">l</div>
 	  <div class="col">d</div>
 	</div>
-	<div class="row ladder-content">
-	  <div class="col logo" style="background-image: url('img/ladder/1.jpg');"><!-- t<img src="img/ladder/1.jpg" alt="" class="logo-ladder-team"> --><span>1</span></div>
+	<div class="row ladder-content" ng-repeat="item in Items | orderBy: ['-Point', '-Won']">
+	  <div class="col logo" style="background-image: url('img/ladder/{{item.Logo}}');"><!-- t<img src="img/ladder/1.jpg" alt="" class="logo-ladder-team"> --><span>{{$index + 1}}</span></div>
 	  <div class="col-20 team-name lineheight">
-	  	<span class="short-name">xxx</span>
-	  	<span>Indonesia</span>
+	  	<span class="short-name">{{item.Background}}</span>
+	  	<span>{{item.TeamName}}</span>
 	  </div>
-	  <div class="col">125</div>
-	  <div class="col">531</div>
-	  <div class="col">421</div>
-	  <div class="col">44</div>
-	  <div class="col">150</div>
+	  <div class="col">{{item.Point}}</div>
+	  <div class="col">{{item.Plays}}</div>
+	  <div class="col">{{item.Won}}</div>
+	  <div class="col">{{item.Lost}}</div>
+	  <div class="col">{{item.Draws}}</div>
 	</div>
   </ion-content>
 </ion-view>
