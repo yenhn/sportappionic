@@ -120,7 +120,7 @@ angular.module('sportApp', ['ionic','ionic-datepicker', 'sportApp.controllers', 
       }
     })
     .state('app.detailplayer', {
-      url: '/detailplayer',
+      url: '/detailplayer/:id',
       views: {
         'menuContent': {
           templateUrl: 'templates/detailplayer.html'

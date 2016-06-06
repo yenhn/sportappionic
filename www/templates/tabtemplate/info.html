@@ -3,34 +3,34 @@
 		<div class="col col-30 clubtab__image">
 			<label class="clubtab__image--label">Arsenal</label>
 			<div>
-				<img src="img/club/Arsenal.png" class="clubtab__image--img">
+				<img src="img/club/{{Logo_Team}}" class="clubtab__image--img">
 			</div>
 		</div>
 		<div class="col col-70 detailcontent">
 			<div class="detailcontent__right">
 				<label class="label__detail--left label__detail">Height:</label>
-				<label class="label__detail">172cm</label>
+				<label class="label__detail" ng-bind="Height"></label>
 			</div>
 			<div class="detailcontent__right">
 				<label class="label__detail--left label__detail">Age:</label>
-				<label class="label__detail">26</label>
+				<label class="label__detail" ng-bind="Age"></label>
 			</div>
 			<div class="detailcontent__right">
 				<label class="label__detail--left label__detail">Weight:</label>
-				<label class="label__detail">68kg</label>
+				<label class="label__detail" ng-bind="Weight"></label>
 			</div>
 			<div class="detailcontent__right">
 				<label class="label__detail--left label__detail">Foot:</label>
-				<label class="label__detail">R</label>
+				<label class="label__detail" ng-bind="Foot"></label>
 			</div>
 			<div class="detailcontent__right">
 				<label class="label__detail--left label__detail">Cost:</label>
-				<label class="label__detail">3000&#163</label>
+				<label class="label__detail" ng-bind="Cost"></label>
 			</div>
 			<div class="detailcontent__right row">
 				<label class="label__detail--left label__detail">National:</label>
 				<label class="flag-international">
-					<img src="img/flag/USA.png" alt="" class="flag-img">
+					<img src="img/flag/{{National}}.png" alt="" class="flag-img">
 				</label>
 			</div>
 		</div>
@@ -41,44 +41,44 @@
 		<div class="col col-30">				
 				<div class="col row content__pos--left">
 					<label class="icon ion-ios-pricetag icon__pos--red"></label>
-					<label class="label__detail">Fw</label>
+					<label class="label__detail" ng-bind="Position"></label>
 				</div>
 				<div class="col row content__pos--left">
 					<label class="icon ion-ios-football icon__pos"></label>
-					<label class="label__detail">365</label>
+					<label class="label__detail" ng-bind="Won"></label>
 				</div>
 				<div class="col row content__pos--left">
 					<label class="fa fa-eraser icon__pos--red"></label>
-					<label class="label__detail">15</label>
+					<label class="label__detail" ng-bind="Red_Card"></label>
 				</div>
 				<div class="col row content__pos--left">
 					<label class="fa fa-eraser icon__pos--yellow"></label>
-					<label class="label__detail">15</label>
+					<label class="label__detail" ng-bind="Yellow_Card"></label>
 				</div>
 		</div>
 		<div class="col col-30">				
 				<div class="col row content__pos--left">
 					<label class="icon ion-arrow-graph-up-right icon__pos--green"></label>
-					<label class="label__detail">100%</label>
+					<label class="label__detail" ng-bind="Health"></label>
 				</div>
 				<div class="col row content__pos--left">
 					<label class="fa fa-heartbeat icon__pos--red"></label>
-					<label class="label__detail">Good</label>
+					<label class="label__detail" ng-bind="Heart"></label>
 				</div>
 				<div class="col row content__pos--left">
 					<label class="icon ion-star icon__pos--yellow"></label>
-					<label class="label__detail">5</label>
+					<label class="label__detail" ng-bind="Rate"></label>
 				</div>
 				<div class="col row content__pos--left">
 					<label class="icon ion-trophy icon__pos--gray"></label>
-					<label class="label__detail">10</label>
+					<label class="label__detail" ng-bind="Awards"></label>
 				</div>
 		</div>
 		<div class="col col-40">
 			<div class="number__shirt">
 				<img src="img/clubtshirt.png" class="clubtab__image--imgshirt">
 				<div class="number__shirt--number">
-					<span class="number__shirt--span">17</span>
+					<span class="number__shirt--span" ng-bind="No_Player"></span>
 				</div>
 			</div>
 			
