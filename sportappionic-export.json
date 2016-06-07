@@ -1,4 +1,56 @@
 {
+  "albums" : {
+    "01" : {
+      "Images" : "1.jpg",
+      "date" : "01/10/2016",
+      "player_id" : "01"
+    },
+    "02" : {
+      "Images" : "2.jpg",
+      "date" : "01/10/2016",
+      "player_id" : "01"
+    },
+    "03" : {
+      "Images" : "3.jpg",
+      "date" : "01/10/2016",
+      "player_id" : "01"
+    },
+    "04" : {
+      "Images" : "3.jpg",
+      "date" : "02/10/2016",
+      "player_id" : "01"
+    },
+    "05" : {
+      "Images" : "4.jpg",
+      "date" : "03/10/2016",
+      "player_id" : "01"
+    },
+    "06" : {
+      "Images" : "5.jpg",
+      "date" : "02/10/2016",
+      "player_id" : "01"
+    },
+    "07" : {
+      "Images" : "6.jpg",
+      "date" : "05/10/2016",
+      "player_id" : "02"
+    },
+    "08" : {
+      "Images" : "7.jpg",
+      "date" : "05/10/2016",
+      "player_id" : "02"
+    },
+    "09" : {
+      "Images" : "8.jpg",
+      "date" : "05/10/2016",
+      "player_id" : "02"
+    },
+    "10" : {
+      "Images" : "9.jpg",
+      "date" : "05/10/2016",
+      "player_id" : "02"
+    }
+  },
   "ladders" : {
     "01" : {
       "background" : "nyk",

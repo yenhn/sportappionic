@@ -8,9 +8,14 @@
 			return new Firebase(url + id);
 		}
 
+		function data(url){
+			return new Firebase(url);
+		}
+
 		return {
 			GetAll: GetAllRecord,
-			getDetail : GetDetailNews
+			getDetail : GetDetailNews,
+			getData: data
 		}
 	})
 }(angular.module('sportApp')));
