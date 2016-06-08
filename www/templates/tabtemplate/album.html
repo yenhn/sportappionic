@@ -1,44 +1,23 @@
+<div ng-controller="AlbumController">
+	<div class="col col-center" >
+<ion-slide-box>
+  <ion-slide class="list__slide" ng-repeat="item in album_player">
+    <img src="img/{{item.Images}}" class="img-slidebox">	    
+  </ion-slide>
+</ion-slide-box>
+</div>
+<div class="col col-center"ng-repeat="(key, value) in album_player | groupBy: 'Date'">
+	<ul id="tabs">
+    	<li><a href="#" title="2016" ng-bind="key"></a></li>    
+	</ul>
+	<ion-scroll id="content" zooming="true" direction="x" class="album__player">
+		<div class="row image__album">
+			<img src="img/{{img.Images}}" class="album__player--image" ng-repeat="img in value">
+		    
+		</div>
+   	</ion-scroll>
+</div>
 
-<div class="col col-center" ng-controller="AlbumController">
-	<ion-slide-box>
-	  <ion-slide class="list__slide" ng-repeat="item in album_player">
-	    <img src="img/{{item.Images}}" class="img-slidebox">	    
-	  </ion-slide>
-	  <!-- <ion-slide class="list__slide">
-	    <img src="img/4.jpg" class="img-slidebox">
-	  </ion-slide>
-	  <ion-slide class="list__slide">
-	    <img src="img/4.jpg" class="img-slidebox">
-	  </ion-slide>
-	  <ion-slide class="list__slide"> 
-	    <img src="img/4.jpg" class="img-slidebox">
-	  </ion-slide>  -->
-	</ion-slide-box>
-</div>
-<div class="col col-center" ng-controller="Albums" ng-repeat="item in album_player | groupBy: 'item.Date'">
-	<ul id="tabs">
-    	<li><a href="#" title="2016" ng-bind="item.Date"></a></li>    
-	</ul>
-	<ion-scroll id="content" zooming="true" direction="x" class="album__player">
-		<div class="row image__album">
-			<img src="img/4.jpg" class="album__player--image">
-		    <img src="img/4.jpg" class="album__player--image">
-		    <img src="img/4.jpg" class="album__player--image">
-		    <img src="img/4.jpg" class="album__player--image">
-		</div>
-   	</ion-scroll>
-</div>
-<div class="col col-center" >
-	<ul id="tabs">
-    	<li><a href="#" title="2016">07/03/2015</a></li>    
-	</ul>
-	<ion-scroll id="content" zooming="true" direction="x" class="album__player">
-		<div class="row image__album">
-				<img src="img/4.jpg" class="album__player--image">
-		    <img src="img/4.jpg" class="album__player--image">
-		    <img src="img/4.jpg" class="album__player--image">
-		    <img src="img/4.jpg" class="album__player--image">
-		</div>
-   	</ion-scroll>
+
 </div>
 
