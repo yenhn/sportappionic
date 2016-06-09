@@ -1,18 +1,18 @@
-<div class="col col-center team__template">
+<div class="col col-center team__template" ng-controller="ClubController">
     <div class="title__team">
     </div>
     <div class="title__team__content" id="detailunder">
     </div>
     <ion-slide-box class="slide__team" show-pager="false">
-        <ion-slide>
+        <ion-slide ng-repeat="item in team_info">
             <div class="slide__team__header">
-                <span class="slide__team__header--year">1990 - 1994</span>
+                <span class="slide__team__header--year" ng-bind="item.Years"></span>
             </div>
             <div class="slide__team__content col col-center">
-                <img src="img/club/Arsenal.png" class="slide__team__content--img">
+                <img src="img/club/{{item.Club_image}}" class="slide__team__content--img">
             </div>
             <div class="slide__team__header--nameclub">
-                <span class="slide__team__header--year">ARSENAL</span>
+                <span class="slide__team__header--year" ng-bind="item.Club"></span>
             </div>
             <div class="slide__team__content__detail">
                 <div class="row detail-content-team">
@@ -20,7 +20,7 @@
                         <span><i class="fa fa-street-view detail-icon-content" aria-hidden="true"></i></span>
                     </div>
                     <div class="col-60 column-right">
-                        <span class="detail__total__play detail-text-content">35</span>
+                        <span class="detail__total__play detail-text-content" ng-bind="item.Active"></span>
                         <hr/>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                         <span><i class="fa fa-futbol-o detail-icon-content" aria-hidden="true"></i></span>
                     </div>
                     <div class="col-60 column-right">
-                        <span class="detail__total__play detail-text-content">365</span>
+                        <span class="detail__total__play detail-text-content" ng-bind="item.Goals"></span>
                         <hr/>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                         <span><i class="fa fa-trophy detail-icon-content" aria-hidden="true"></i></span>
                     </div>
                     <div class="col-60 column-right">
-                        <span class="detail__total__play detail-text-content">6</span>
+                        <span class="detail__total__play detail-text-content" ng-bind="item.Awards"></span>
                         <hr/>
                     </div>
                 </div>
@@ -58,116 +58,6 @@
                     </div>
                 </div>
             </div>
-        </ion-slide>
-        <ion-slide>
-            <div class="slide__team__header">
-                <span class="slide__team__header--year">1995 - 2000</span>
-            </div>
-            <div class="slide__team__content col col-center">
-                <img src="img/club/FC-Barcelona.png" class="slide__team__content--img">
-            </div>
-            <div class="slide__team__header--nameclub">
-                <span class="slide__team__header--year">BARCELONA</span>
-            </div>
-            <div class="slide__team__content__detail">
-                <div class="row detail-content-team">
-                    <div class="col-40 detail-content-img">
-                        <span><i class="fa fa-street-view detail-icon-content" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="col-60 column-right">
-                        <span class="detail__total__play detail-text-content">35</span>
-                        <hr/>
-                    </div>
-                </div>
-                <div class="row detail-content-team">
-                    <div class="col-40 detail-content-img">
-                        <span><i class="fa fa-futbol-o detail-icon-content" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="col-60 column-right">
-                        <span class="detail__total__play detail-text-content">365</span>
-                        <hr/>
-                    </div>
-                </div>
-                <div class="row detail-content-team">
-                    <div class="col-40 detail-content-img">
-                        <span><i class="fa fa-trophy detail-icon-content" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="col-60 column-right">
-                        <span class="detail__total__play detail-text-content">6</span>
-                        <hr/>
-                    </div>
-                </div>
-                <div class="row detail-content-team">
-                    <div class="col-40 detail-content-img">
-                        <span><i class="fa fa-thumbs-up detail-icon-content" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="col-60 column-right">
-                        <span class="detail__total__play detail-text-content">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                    </span>
-                    <hr/>
-                    </div>
-                </div>
-            </div>
-        </ion-slide>
-        <ion-slide>
-            <div class="slide__team__header">
-                <span class="slide__team__header--year">2001 - 2016</span>
-            </div>
-            <div class="slide__team__content col col-center">
-                <img src="img/club/Real-Madrid.png" class="slide__team__content--img">
-            </div>
-            <div class="slide__team__header--nameclub">
-                <span class="slide__team__header--year">REAL MADRID</span>
-            </div>
-            <div class="slide__team__content__detail">
-                <div class="row detail-content-team">
-                    <div class="col-40 detail-content-img">
-                        <span><i class="fa fa-street-view detail-icon-content" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="col-60 column-right">
-                        <span class="detail__total__play detail-text-content">35</span>
-                        <hr/>
-                    </div>
-                </div>
-                <div class="row detail-content-team">
-                    <div class="col-40 detail-content-img">
-                        <span><i class="fa fa-futbol-o detail-icon-content" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="col-60 column-right">
-                        <span class="detail__total__play detail-text-content">365</span>
-                        <hr/>
-                    </div>
-                </div>
-                <div class="row detail-content-team">
-                    <div class="col-40 detail-content-img">
-                        <span><i class="fa fa-trophy detail-icon-content" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="col-60 column-right">
-                        <span class="detail__total__play detail-text-content">6</span>
-                        <hr/>
-                    </div>
-                </div>
-                <div class="row detail-content-team">
-                    <div class="col-40 detail-content-img">
-                        <span><i class="fa fa-thumbs-up detail-icon-content" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="col-60 column-right">
-                        <span class="detail__total__play detail-text-content">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                    </span>
-                    <hr/>
-                    </div>
-                </div>
-            </div>
-        </ion-slide>
+        </ion-slide>        
     </ion-slide-box>
 </div>

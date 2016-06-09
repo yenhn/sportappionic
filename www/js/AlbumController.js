@@ -1,5 +1,5 @@
 (function(app){
-	app.controller("AlbumController", function($scope, sportFactory, $ionicLoading, $ionicSlideBoxDelegate, $interval){
+	app.controller("AlbumController", function($scope, sportFactory, $ionicLoading, $ionicSlideBoxDelegate, $interval, $stateParams){
 		$ionicLoading.show({
 			content: 'Loading',
 			animation: 'fade-in',
@@ -8,23 +8,23 @@
 			showDelay: 0
 		});
 
+
 		var maxSlides = 5;
     	var slideCounter = 2;
 
 		var album = sportFactory.getData("https://sportappionic.firebaseio.com/");
+
 		$scope.album_player = [];
-		album.child("albums").orderByChild('player_id').equalTo("01").on("child_added", function(snapshot){
+		album.child("albums").orderByChild('player_id').equalTo($stateParams.id).on("child_added", function(snapshot){
 			$ionicLoading.hide();
 			var ab = snapshot.val();
 			var image = ab.Images;
-			var date = ab.date;
-			//$scope.album_player.push({image})
-			$scope.album_player.push({Images: image, Date: date})
-			/*console.log(image);*/
-			console.log($scope.album_player)
-		})
-		$ionicSlideBoxDelegate.update();
+			var date = ab.date;			
+			$scope.album_player.push({Images: image, Date: date});	
+		
+		});
 
+		$ionicSlideBoxDelegate.update();
 		var intervalId = $interval( function() {
 
 

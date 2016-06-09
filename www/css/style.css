@@ -254,10 +254,11 @@ top: 44px!important;
     font-weight: bold!important;
 }
 
-.ionic_datepicker_modal .today{
+.ionic_datepicker_modal .today {
     border: 0!important;
     color: #43BF87!important;
 }
+
 
 /*******TEAM PAGE**********/
 
@@ -454,15 +455,23 @@ top: 44px!important;
     height: 28px !important;
     margin-top: 2px !important;
 }
-.tabs-icon-left.tabs .tab-item, .tabs-icon-left > .tabs .tab-item, .tabs-icon-right.tabs .tab-item, .tabs-icon-right > .tabs .tab-item{
+
+.tabs-icon-left.tabs .tab-item,
+.tabs-icon-left > .tabs .tab-item,
+.tabs-icon-right.tabs .tab-item,
+.tabs-icon-right > .tabs .tab-item {
     font-size: 15px!important;
 }
-.tabs-icon-left > .tabs .tab-item .icon, .tabs-icon-left.tabs .tab-item .icon{
+
+.tabs-icon-left > .tabs .tab-item .icon,
+.tabs-icon-left.tabs .tab-item .icon {
     padding: 0 15px!important;
 }
-span.tab-title.ng-binding{
+
+span.tab-title.ng-binding {
     padding-top: 2px!important;
 }
+
 .tabitem__border {
     border-right: 1px solid lightgray;
 }
@@ -614,9 +623,11 @@ span.tab-title.ng-binding{
 .content__pos--left {
     padding: 15px 10px;
 }
-.content__pos--left label{
-    padding-right:2px;
+
+.content__pos--left label {
+    padding-right: 2px;
 }
+
 .detailcontent {
     padding-left: 10%;
 }
@@ -806,14 +817,120 @@ hr {
     color: black;
 }
 
-.button_set{
+.button_set {
     display: none
 }
 
-.pointer_events_none{
+.pointer_events_none {
     width: 100px;
     height: 100px;
     background: red;
     border-radius: 50%;
-    
+}
+
+
+/*change ST*/
+
+.item h2 {
+    font-size: 5vw;
+}
+
+p.ng-binding {
+    font-size: 3vw;
+}
+
+.date {
+    position: absolute;
+    background: #43bf87;
+    padding: 5px;
+    font-weight: bolder;
+    color: #323A45;
+    top: 18px;
+    width: 20%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3vw;
+    font-family: CaviarDreams;
+    z-index: 1;
+}
+
+.item {
+    margin: -2px;
+}
+
+.has-header {
+    top: 0;
+}
+
+.caption {
+    font-size: 10vw;
+    margin-bottom: 0px;
+}
+
+.short-name {
+    padding: 1px 6px;
+}
+
+p#sname {
+    font-size: 4vw;
+}
+
+p#tname {
+    font-size: 4vw;
+}
+
+div#team {
+    padding: 5px;
+}
+
+ion-content.ionic_datepicker_modal_content.scroll-content.ionic-scroll.has-header.has-footer {
+    top: 45px;
+}
+
+h2.titledetail.ng-binding {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    font-size: 7vw;
+    font-family: inherit;
+}
+
+.lastupdate {
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.share {
+    font-size: 5vw;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    color: grey;
+}
+
+i.icon.ion-social-twitter {
+    padding-right: 5px;
+}
+
+i.icon.ion-social-facebook {
+    padding-right: 5px;
+}
+
+p.decrip {
+    white-space: normal;
+    padding-left: 10px;
+}
+
+h3.detail1 {
+    font-size: 4vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: inherit;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+p.detail2 {
+    font-size: 4vw;
+    padding-left: 10px;
+    padding-right: 10px;
 }

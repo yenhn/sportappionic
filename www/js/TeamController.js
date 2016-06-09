@@ -1,7 +1,8 @@
 (function(app){
-	app.controller("TeamController", function($scope, $timeout, $ionicLoading, Team){
+	app.controller("ClubController", function($scope, $timeout, $ionicLoading, sportFactory, 
+												$stateParams, $ionicSlideBoxDelegate, $interval){
 
-		// Setup the loader
+
 		$ionicLoading.show({
 			content: 'Loading',
 			animation: 'fade-in',
@@ -10,119 +11,51 @@
 			showDelay: 0
 		});
 
-		
-		var teamObject = Team.GetTeambyTeamName("https://sportappionic.firebaseio.com/teams");
+		var maxSlides = 5;
+    	var slideCounter = 2;
 
-		teamObject.$loaded().then(function(){
+		var album = sportFactory.getData("https://sportappionic.firebaseio.com/");
+		
+		$scope.team_info = [];
+		album.child("teams").orderByChild('player_id').equalTo($stateParams.id).on("child_added", function(snapshot){
 			$ionicLoading.hide();
-			var teams = [];
-			var def = [];
-			var gk = [];
-			var md = [];
-			var fw = [];
-			
-			angular.forEach(teamObject, function(rsp){
+			var t = snapshot.val();
+			/*var Club_image = t.club_image;
+			var Years = t.years;
+			var Club = t.club;
+			var active = t.active;
+			var Goals = t.goals;
+			var Awards = t.awards;*/
 
-				if(rsp.position == 'GK')
-				{
-					
-					gk.push({
-						Id : rsp.$id,
-						fullname: rsp.fullname,
-						Position: rsp.position,
-						No_Player: rsp.noplayer,
-						ImagePlayer: rsp.imageplayer
-					})
-					$scope.GK = gk;
-				}
-
-				if(rsp.position == 'DEF')
-				{
-					
-				
-					def.push({
-						Id : rsp.$id,
-						fullname: rsp.fullname,
-						Position: rsp.position,
-						No_Player: rsp.noplayer,
-						ImagePlayer: rsp.imageplayer
-					})
-					
-					$scope.DEF = def;
-				}
-
-				if(rsp.position == 'MD')
-				{
-					
-					
-						md.push({
-							Id : rsp.$id,
-							fullname: rsp.fullname,
-							Position: rsp.position,
-							No_Player: rsp.noplayer,
-							ImagePlayer: rsp.imageplayer
-						})
-					
-					$scope.MD = md;
-				}
-
-				if(rsp.position == 'FW')
-				{
-					
-					
-						fw.push({
-							Id : rsp.$id,
-							fullname: rsp.fullname,
-							Position: rsp.position,
-							No_Player: rsp.noplayer,
-							ImagePlayer: rsp.imageplayer
-						})
-					
-					$scope.FW = fw;
-				}
-			})
-		});
-			
+			$scope.team_info.push({
+				Club_image: t.image_club,
+				Years : t.years,
+				Club : t.club,
+				Active : t.active,
+				Goals : t.goals,
+				Awards : t.awards
+			});	
+			console.log($scope.team_info)
 		
-	})
-
-	app.controller("DetailPlayerController", function($scope, sportFactory, $ionicLoading, $stateParams){
-		$ionicLoading.show({
-			content: 'Loading',
-			animation: 'fade-in',
-			showBackdrop: true,
-			maxWidth: 200,
-			showDelay: 0
 		});
 
-		var player = sportFactory.getDetail("https://sportappionic.firebaseio.com/teams/", $stateParams.id);
+		$ionicSlideBoxDelegate.update();
 
-		player.on("value", function(snapshot, prevChildKey){
-			$ionicLoading.hide();
-			var inf = snapshot.val();
-			$scope.Name = inf.fullname;
-			$scope.Image_Player = inf.imageplayer
-			$scope.Height = inf.height;
-			$scope.Image = inf.imageplayer;
-			$scope.Logo_Team = inf.logoteam;
-			$scope.National = inf.national;
-			$scope.Team_Name = inf.teamname;
-			$scope.Title = inf.title;
-			$scope.Heart = inf.heart;
-			$scope.Health = inf.healthy;
-			$scope.Foot = inf.foot;
-			$scope.Cost = inf.cost;
-			$scope.Content = inf.content;
-			$scope.Red_Card = inf.redtag;
-			$scope.Yellow_Card = inf.yellowtag;
-			$scope.No_Player = inf.noplayer;
-			$scope.Won = inf.won;
-			$scope.Weight = inf.weight;
-			$scope.Rate = inf.rating;
-			$scope.Age = inf.age;
-			$scope.Position = inf.position;
-			$scope.Awards = inf.awards
-		})
+			var intervalId = $interval( function() {
+
+
+	        if( slideCounter < maxSlides) {
+
+	            slideCounter++;
+	            console.log('Adding a slide');
+	            
+
+	            $ionicSlideBoxDelegate.update();
+	        } else {
+	            console.log('All full!');
+	            $interval.cancel(intervalId);
+	        }
+	    }, 3000);
 	})
 		
 }(angular.module('sportApp')));
