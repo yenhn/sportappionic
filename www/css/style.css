@@ -110,8 +110,9 @@ top: 44px!important;
 
 .ladder-content {
     margin-top: 5px !important;
+    border-bottom: 1px solid #eee
 }
-
+.col-logo-header{width: 50px}
 .logo-ladder-team {
     /* background-image:url('../img/ladder/1.jpg'); */
     background-size: 50px 50px;
@@ -124,11 +125,12 @@ top: 44px!important;
     position: relative;
 }
 
+
 .logo {
     background-size: 50px 50px;
     background-repeat: no-repeat;
     height: 50px;
-    width: 100%;
+    width: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,15 +166,15 @@ top: 44px!important;
 }
 
 .short-name {
-    background: blue;
+    
     color: #fff;
     padding: 5px 10px;
     text-align: center;
     display: inline;
 }
 
-.lineheight {}
-
+.lineheight {line-height: 3}
+.team_name{text-transform: uppercase;}
 .ind,
 .brz,
 .nyk,
@@ -898,23 +900,33 @@ h2.titledetail.ng-binding {
 .lastupdate {
     padding-left: 10px;
     padding-bottom: 10px;
+    width: 50%;
+    float: left;
 }
 
 .share {
     font-size: 5vw;
-    padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 5px;
-    color: grey;
+    /*color: grey;*/
+    width: 50%;
+    float: left;
+    text-align: right
 }
 
 i.icon.ion-social-twitter {
     padding-right: 5px;
+    color: #4090CD;
 }
 
 i.icon.ion-social-facebook {
     padding-right: 5px;
+    color: #3B5997;
 }
-
+i.icon.ion-social-googleplus {
+    padding-right: 5px;
+    color: #D95333;
+}
 p.decrip {
     white-space: normal;
     padding-left: 10px;

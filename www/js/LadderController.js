@@ -9,10 +9,11 @@
 		});
 
 		var ladder = sportFactory.GetAll("https://sportappionic.firebaseio.com/ladders");
+		var color = ['#903823', '#0084c4', '#1a1b36', '#fad157', '#43bf87', '#14b9d6', '#F27935'];
 
 		ladder.$loaded().then(function(){
 			$ionicLoading.hide();
-			teams = [];
+			var teams = [];
 			angular.forEach(ladder, function(rsp){
 				teams.push({
 					Logo: rsp.logo,
@@ -22,11 +23,15 @@
 					Won: rsp.won,
 					Lost: rsp.lost,
 					Draws: rsp.draws,
-					Background: rsp.background
-				})				
-			})	
+					Background: rsp.background					
+				})
+
+
+
+			});
 
 			$scope.Items = teams;
+			console.log(teams);
 	
 		})
 	})

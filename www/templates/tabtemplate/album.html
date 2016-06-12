@@ -1,23 +1,22 @@
 <div ng-controller="AlbumController">
-	<div class="col col-center" >
-<ion-slide-box>
-  <ion-slide class="list__slide" ng-repeat="item in album_player">
-    <img src="img/{{item.Images}}" class="img-slidebox">	    
-  </ion-slide>
-</ion-slide-box>
-</div>
-<div class="col col-center"ng-repeat="(key, value) in album_player | groupBy: 'Date'">
+	<div class="col col-center" ng-hide="noData">
+		<ion-slide-box>
+		  <ion-slide class="list__slide" ng-repeat="item in album_player">
+		    <img ng-src="img/{{item.Images}}" class="img-slidebox">	    
+		  </ion-slide>
+		</ion-slide-box>
+	</div>
+<div class="col col-center"ng-repeat="(key, value) in album_player | groupBy: 'date'" ng-hide="noData">
 	<ul id="tabs">
     	<li><a href="#" title="2016" ng-bind="key"></a></li>    
 	</ul>
 	<ion-scroll id="content" zooming="true" direction="x" class="album__player">
 		<div class="row image__album">
-			<img src="img/{{img.Images}}" class="album__player--image" ng-repeat="img in value">
-		    
+			<img ng-src="img/{{img.Images}}" class="album__player--image" ng-repeat="img in value">		    
 		</div>
    	</ion-scroll>
 </div>
 
-
+<span class="noData" ng-show="noData">No information</span>
 </div>
 

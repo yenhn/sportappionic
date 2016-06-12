@@ -12,34 +12,39 @@
 		var maxSlides = 5;
     	var slideCounter = 2;
 
-		var album = sportFactory.getData("https://sportappionic.firebaseio.com/");
-
-		$scope.album_player = [];
-		album.child("albums").orderByChild('player_id').equalTo($stateParams.id).on("child_added", function(snapshot){
-			$ionicLoading.hide();
-			var ab = snapshot.val();
-			var image = ab.Images;
-			var date = ab.date;			
-			$scope.album_player.push({Images: image, Date: date});	
 		
-		});
+			var album = sportFactory.getData("https://sportappionic.firebaseio.com/");
+
+			$scope.album_player = [];
+			
+
+			album.child("albums").orderByChild('player_id').equalTo($stateParams.id).on("value", function(snapshot){
+				$ionicLoading.hide();
+
+				var ab = snapshot.val();
+
+				if(ab != null || ab != 'undefined'){
+					$scope.album_player = ab;
+					$scope.noData = false;	
+				}
+
+				if(ab==null){					
+					$scope.noData = true;
+				}
+				
+				
+			});
+		
 
 		$ionicSlideBoxDelegate.update();
-		var intervalId = $interval( function() {
-
-
-        if( slideCounter < maxSlides) {
-
-            slideCounter++;
-            console.log('Adding a slide');
-            
-
-            $ionicSlideBoxDelegate.update();
-        } else {
-            console.log('All full!');
-            $interval.cancel(intervalId);
-        }
-    }, 3000);
+			var intervalId = $interval( function() {
+	        if( slideCounter < maxSlides) {
+	            slideCounter++;  
+	            $ionicSlideBoxDelegate.update();
+	        } else {            
+	            $interval.cancel(intervalId);
+	        }
+	    }, 1000);
 		
 
 		/*ladder.$loaded().then(function(){

@@ -17,45 +17,39 @@
 		var album = sportFactory.getData("https://sportappionic.firebaseio.com/");
 		
 		$scope.team_info = [];
-		album.child("teams").orderByChild('player_id').equalTo($stateParams.id).on("child_added", function(snapshot){
+		album.child("teams").orderByChild('player_id').equalTo($stateParams.id).on("value", function(snapshot){
+			
 			$ionicLoading.hide();
-			var t = snapshot.val();
-			/*var Club_image = t.club_image;
-			var Years = t.years;
-			var Club = t.club;
-			var active = t.active;
-			var Goals = t.goals;
-			var Awards = t.awards;*/
 
-			$scope.team_info.push({
-				Club_image: t.image_club,
-				Years : t.years,
-				Club : t.club,
-				Active : t.active,
-				Goals : t.goals,
-				Awards : t.awards
-			});	
-			console.log($scope.team_info)
-		
+			var t = snapshot.val();
+			if(t != null || t != 'undefined'){
+				angular.forEach(t, function(rs){
+					$scope.team_info.push({
+						Club_image: rs.image_club,
+						Years : rs.years,
+						Club : rs.club,
+						Active : rs.active,
+						Goals : rs.goals,
+						Awards : rs.awards
+					});	
+				});
+				$scope.noData = false;
+			}
+
+			if(t == null || t == 'undefined') $scope.noData = true;			
 		});
 
 		$ionicSlideBoxDelegate.update();
 
 			var intervalId = $interval( function() {
-
-
 	        if( slideCounter < maxSlides) {
 
 	            slideCounter++;
-	            console.log('Adding a slide');
-	            
-
 	            $ionicSlideBoxDelegate.update();
-	        } else {
-	            console.log('All full!');
+	        } else {	            
 	            $interval.cancel(intervalId);
 	        }
-	    }, 3000);
+	    }, 500);
 	})
 		
 }(angular.module('sportApp')));

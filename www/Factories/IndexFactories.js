@@ -9,7 +9,9 @@
 		}
 
 		function data(url){
-			return new Firebase(url);
+			ref = new Firebase(url);
+			
+			return ref;
 		}
 
 		return {

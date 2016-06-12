@@ -1,63 +1,66 @@
 <div class="col col-center team__template" ng-controller="ClubController">
-    <div class="title__team">
+    <div ng-hide="noData">
+        <div class="title__team">
+        </div>
+        <div class="title__team__content" id="detailunder">
+        </div>
+        <ion-slide-box class="slide__team" show-pager="false">
+            <ion-slide ng-repeat="item in team_info">
+                <div class="slide__team__header">
+                    <span class="slide__team__header--year" ng-bind="item.Years"></span>
+                </div>
+                <div class="slide__team__content col col-center">
+                    <img ng-src="img/club/{{item.Club_image}}" class="slide__team__content--img" />
+                </div>
+                <div class="slide__team__header--nameclub">
+                    <span class="slide__team__header--year" ng-bind="item.Club"></span>
+                </div>
+                <div class="slide__team__content__detail">
+                    <div class="row detail-content-team">
+                        <div class="col-40 detail-content-img">
+                            <span><i class="fa fa-street-view detail-icon-content" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="col-60 column-right">
+                            <span class="detail__total__play detail-text-content" ng-bind="item.Active"></span>
+                            <hr/>
+                        </div>
+                    </div>
+                    <div class="row detail-content-team">
+                        <div class="col-40 detail-content-img">
+                            <span><i class="fa fa-futbol-o detail-icon-content" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="col-60 column-right">
+                            <span class="detail__total__play detail-text-content" ng-bind="item.Goals"></span>
+                            <hr/>
+                        </div>
+                    </div>
+                    <div class="row detail-content-team">
+                        <div class="col-40 detail-content-img">
+                            <span><i class="fa fa-trophy detail-icon-content" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="col-60 column-right">
+                            <span class="detail__total__play detail-text-content" ng-bind="item.Awards"></span>
+                            <hr/>
+                        </div>
+                    </div>
+                    <div class="row detail-content-team">
+                        <div class="col-40 detail-content-img">
+                            <span><i class="fa fa-thumbs-up detail-icon-content" aria-hidden="true"></i></span>
+                        </div>
+                        <div class="col-60 column-right">
+                            <span class="detail__total__play detail-text-content">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                        </span>
+                        <hr/>
+                        </div>
+                    </div>
+                </div>
+            </ion-slide>        
+        </ion-slide-box>
     </div>
-    <div class="title__team__content" id="detailunder">
-    </div>
-    <ion-slide-box class="slide__team" show-pager="false">
-        <ion-slide ng-repeat="item in team_info">
-            <div class="slide__team__header">
-                <span class="slide__team__header--year" ng-bind="item.Years"></span>
-            </div>
-            <div class="slide__team__content col col-center">
-                <img src="img/club/{{item.Club_image}}" class="slide__team__content--img">
-            </div>
-            <div class="slide__team__header--nameclub">
-                <span class="slide__team__header--year" ng-bind="item.Club"></span>
-            </div>
-            <div class="slide__team__content__detail">
-                <div class="row detail-content-team">
-                    <div class="col-40 detail-content-img">
-                        <span><i class="fa fa-street-view detail-icon-content" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="col-60 column-right">
-                        <span class="detail__total__play detail-text-content" ng-bind="item.Active"></span>
-                        <hr/>
-                    </div>
-                </div>
-                <div class="row detail-content-team">
-                    <div class="col-40 detail-content-img">
-                        <span><i class="fa fa-futbol-o detail-icon-content" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="col-60 column-right">
-                        <span class="detail__total__play detail-text-content" ng-bind="item.Goals"></span>
-                        <hr/>
-                    </div>
-                </div>
-                <div class="row detail-content-team">
-                    <div class="col-40 detail-content-img">
-                        <span><i class="fa fa-trophy detail-icon-content" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="col-60 column-right">
-                        <span class="detail__total__play detail-text-content" ng-bind="item.Awards"></span>
-                        <hr/>
-                    </div>
-                </div>
-                <div class="row detail-content-team">
-                    <div class="col-40 detail-content-img">
-                        <span><i class="fa fa-thumbs-up detail-icon-content" aria-hidden="true"></i></span>
-                    </div>
-                    <div class="col-60 column-right">
-                        <span class="detail__total__play detail-text-content">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                    </span>
-                    <hr/>
-                    </div>
-                </div>
-            </div>
-        </ion-slide>        
-    </ion-slide-box>
+    <span class="noData" ng-show="noData">No information</span>
 </div>
