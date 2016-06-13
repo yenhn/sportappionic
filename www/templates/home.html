@@ -4,10 +4,10 @@
 		
 		<a ui-sref="app.detailnews({id: item.Id})" class="item" ng-repeat="item in Items">
 			<div class="date" ng-bind="item.Post_Date"></div>
-	      	<img ng-src="img/{{item.ImageUrl}}" width="100%"  />
+	      	<img ng-src="img/{{item.ImageUrl}}" fallback-src="img/no-image.png" width="100%"  />
 	      	<div class="news">	   
 	      		<h2 ng-bind="item.Title"></h2>   		
-		      	<p ng-bind="item.Content"></p>
+		      	<p ng-bind="item.Content | plainText"></p>
 		      	<i class="icon ion-eye" ui-sref="app.detailnews"> View More</i>
 	      	</div>
 		</a>

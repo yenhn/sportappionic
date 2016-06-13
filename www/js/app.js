@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('sportApp', ['ionic','ionic-datepicker', 'sportApp.controllers', 'firebase', 'ui.router', 'angular.filter'])
+angular.module('sportApp', ['ionic','ionic-datepicker', 'mwl.calendar', 'sportApp.controllers', 'firebase', 'ui.router', 'angular.filter', 'dcbImgFallback'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -145,15 +145,15 @@ angular.module('sportApp', ['ionic','ionic-datepicker', 'sportApp.controllers', 
     }
   })
 
-  //   .state('app.calendar', {
-  //   url: '/calendar',
-  //   views: {
-  //     'menuContent': {
-  //       templateUrl: 'templates/calendar.html',
-  //       controller: 'CalendarCtrl'
-  //     }
-  //   }
-  // })
+    .state('app.calendar', {
+    url: '/calendar',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/calendar.html',
+        controller: 'CalendarCtrl'
+      }
+    }
+  })
 
     .state('app.team', {
     url: '/teams',

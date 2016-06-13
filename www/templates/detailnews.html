@@ -12,8 +12,10 @@
                 <i class="icon ion-social-googleplus"></i>
             </div>
             
-            <img src="img/thumbnews/{{ImageUrl}}" />
-            <div ng-bind-html="Content"></div>
+            <img src="img/thumbnews/{{ImageUrl}}" fallback-src="img/no-image.png" class="thumbnail" />
+            <div ng-bind-html="Content" class="content-detail">
+                                        
+            </div>
 
         </div>
     </ion-content>

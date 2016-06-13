@@ -2,7 +2,7 @@
 	<div class="col col-center" ng-hide="noData">
 		<ion-slide-box>
 		  <ion-slide class="list__slide" ng-repeat="item in album_player">
-		    <img ng-src="img/{{item.Images}}" class="img-slidebox">	    
+		    <img ng-src="img/{{item.Images}}" fallback-src="img/no-image.png" class="img-slidebox">	    
 		  </ion-slide>
 		</ion-slide-box>
 	</div>
@@ -12,7 +12,7 @@
 	</ul>
 	<ion-scroll id="content" zooming="true" direction="x" class="album__player">
 		<div class="row image__album">
-			<img ng-src="img/{{img.Images}}" class="album__player--image" ng-repeat="img in value">		    
+			<img ng-src="img/{{img.Images}}" class="album__player--image" fallback-src="img/no-image.png" ng-repeat="img in value">		    
 		</div>
    	</ion-scroll>
 </div>

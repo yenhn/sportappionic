@@ -946,3 +946,7 @@ p.detail2 {
     padding-left: 10px;
     padding-right: 10px;
 }
+.content-detail{
+    padding: 20px;
+}
+.thumbnail{width: 100%}

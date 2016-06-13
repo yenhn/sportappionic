@@ -3,18 +3,18 @@
       <img ng-src="img/stadium2.jpg" class="image__background">
 
       <div class="col col-center image__gk" >
-        <img ng-src="img/team/{{item.ImagePlayer}}" class="image__player--gk" ui-sref="app.detailplayer({id: item.Id})" ng-repeat="item in GK"> 
+        <img ng-src="img/team/{{item.ImagePlayer}}" fallback-src="img/no-avatar.gif" class="image__player--gk" ui-sref="app.detailplayer({id: item.Id})" ng-repeat="item in GK"> 
       </div>
 
       <div class="col col-center image__team4">
-        <img ng-src="img/team/{{item2.ImagePlayer}}" class="image__player--team4" ui-sref="app.detailplayer({id: item2.Id})" ng-repeat="item2 in DEF">
+        <img ng-src="img/team/{{item2.ImagePlayer}}" fallback-src="img/no-avatar.gif" class="image__player--team4" ui-sref="app.detailplayer({id: item2.Id})" ng-repeat="item2 in DEF">
       </div>
       <div class="col col-center image__team3--row1">
-        <img ng-src="img/team/{{item3.ImagePlayer}}" class="image__player--team3" ui-sref="app.detailplayer({id: item3.Id})" ng-repeat="item3 in MD">
+        <img ng-src="img/team/{{item3.ImagePlayer}}" fallback-src="img/no-avatar.gif" class="image__player--team3" ui-sref="app.detailplayer({id: item3.Id})" ng-repeat="item3 in MD">
         
       </div>
       <div class="col col-center image__team3--row2">
-        <img ng-src="img/team/{{item4.ImagePlayer}}" class="image__player--team3" ui-sref="app.detailplayer({id: item4.Id})" ng-repeat="item4 in FW">
+        <img ng-src="img/team/{{item4.ImagePlayer}}" fallback-src="img/no-avatar.gif" class="image__player--team3" ui-sref="app.detailplayer({id: item4.Id})" ng-repeat="item4 in FW">
       </div> 
   </div>
 </ion-view>

@@ -1,9 +1,9 @@
 <ion-view view-title="Detail Player" class="view__detail__player" ng-controller="DetailPlayerController">
   <ion-content class="content__detailplayer">
     <div class="col col-center content__headdetail">
-      <div><img src="img/team/{{Image_Player}}" class="img__detailplayer"></div>      
+      <div><img src="img/team/{{Image_Player}}" fallback-src="img/no-avatar.gif" class="img__detailplayer"></div>      
       <div class="col col-center detail__smallimage">
-        <img src="img/team/{{Image_Player}}" class="img__smallplayer"> 
+        <img src="img/team/{{Image_Player}}" fallback-src="img/no-avatar.gif" class="img__smallplayer"> 
       </div>
       <div class="col col-center detail__player">
         <label class="player__name" ng-bind="Name"></label>
